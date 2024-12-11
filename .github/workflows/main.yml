@@ -25,7 +25,7 @@ jobs:
       - name: Build and test with Maven
         run: |
           cd simple-api
-          mvn -B verify sonar:sonar -Dsonar.projectKey=RomainKatz_DevOps_tp -Dsonar.organization=romainkatz -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}  --file ./simple-api/pom.xml
+          mvn -B verify sonar:sonar -Dsonar.projectKey=RomainKatz_DevOps_tp -Dsonar.organization=romainkatz -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}  --file ./pom.xml
 
           
     
