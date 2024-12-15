@@ -1,0 +1,13 @@
+#SPDX-License-Identifier: MIT-0
+---
+# tasks file for roles/reverse-proxy
+- name: Run reverse-proxy
+  docker_container:
+    name: my-reverse-proxy
+    image: romainkatzz/tp-devops-httpd
+    networks: 
+      - name: my_network
+    ports:
+      - "80:80"
+  vars:
+    ansible_python_interpreter: /opt/docker_venv/bin/python3
